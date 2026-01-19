@@ -1,63 +1,59 @@
 #include <stdio.h>
 
+// TORRE 
+void moverTorre(int casas) {
+    if (casas > 0) {
+        printf("Direita\n");
+        moverTorre(casas - 1);
+    }
+}
+
+// BISPO 
+void moverBispo(int casas) {
+    if (casas > 0) {
+        printf("Cima Direita\n");
+        moverBispo(casas - 1);
+    }
+}
+
+// RAINHA 
+void moverRainha(int casas) {
+    if (casas > 0) {
+        printf("Esquerda\n");
+        moverRainha(casas - 1);
+    }
+}
+
 int main() {
 
-    
     // TORRE
-    
-    int casasTorre = 5;
-
     printf("Movimento da Torre:\n");
-
-    for (int i = 0; i < casasTorre; i++) {
-        printf("Direita\n");
-    }
+    moverTorre(5);
 
     printf("\n");
 
-    
     // BISPO
-    
-    int casasBispo = 5;
-    int contBispo = 0;
-
     printf("Movimento do Bispo:\n");
-
-    while (contBispo < casasBispo) {
-        printf("Cima Direita\n");
-        contBispo++;
-    }
+    moverBispo(5);
 
     printf("\n");
 
-    
     // RAINHA
-    
-    int casasRainha = 8;
-    int contRainha = 0;
-
     printf("Movimento da Rainha:\n");
-
-    do {
-        printf("Esquerda\n");
-        contRainha++;
-    } while (contRainha < casasRainha);
+    moverRainha(8);
 
     printf("\n");
 
     
-    // CAVALO
+    //cAVALO 
     
-    // movimento em L
     // 2 pra cima e 1 pra direita
-    // usando loops aninhados
 
-    int movimentoDireita = 1;
     int controle = 0;
 
     printf("Movimento do Cavalo:\n");
 
-    while (controle < movimentoDireita) {
+    while (controle < 1) {
 
         for (int i = 0; i < 2; i++) {
             printf("Cima\n");
