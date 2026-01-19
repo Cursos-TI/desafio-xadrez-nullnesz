@@ -2,9 +2,9 @@
 
 int main() {
 
-    // movimento da TORRE
-    // anda 5 casas pra direita usando for
-
+    
+    // TORRE
+    
     int casasTorre = 5;
 
     printf("Movimento da Torre:\n");
@@ -15,10 +15,9 @@ int main() {
 
     printf("\n");
 
-    // movimento do BISPO
-    // anda na diagonal cima + direita
-    // usando while
-
+    
+    // BISPO
+    
     int casasBispo = 5;
     int contBispo = 0;
 
@@ -31,10 +30,9 @@ int main() {
 
     printf("\n");
 
-    // movimento da RAINHA
-    // anda 8 casas pra esquerda
-    // usando do while
-
+    
+    // RAINHA
+    
     int casasRainha = 8;
     int contRainha = 0;
 
@@ -44,6 +42,30 @@ int main() {
         printf("Esquerda\n");
         contRainha++;
     } while (contRainha < casasRainha);
+
+    printf("\n");
+
+    
+    // CAVALO
+    
+    // movimento em L
+    // 2 pra cima e 1 pra direita
+    // usando loops aninhados
+
+    int movimentoDireita = 1;
+    int controle = 0;
+
+    printf("Movimento do Cavalo:\n");
+
+    while (controle < movimentoDireita) {
+
+        for (int i = 0; i < 2; i++) {
+            printf("Cima\n");
+        }
+
+        printf("Direita\n");
+        controle++;
+    }
 
     return 0;
 }
